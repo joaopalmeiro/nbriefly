@@ -12,7 +12,13 @@
 - https://github.com/swan-io/chicane
 - https://gitlab.com/joaommpalmeiro/template-react-vite
 - https://ui.shadcn.com/docs/components/typography
-- https://shiki.style/
+- https://shiki.style/:
+  - https://github.com/raycast/ray-so/blob/363fd7fa96a95023d46ed85eb0e4fe5bb852f90c/app/(navigation)/(code)/code.tsx#L16
+  - https://github.com/raycast/ray-so/blob/363fd7fa96a95023d46ed85eb0e4fe5bb852f90c/app/(navigation)/(code)/components/HighlightedCode.tsx#L17
+  - https://shiki.matsu.io/guide/bundles#fine-grained-bundle
+  - https://shiki.matsu.io/guide/sync-usage
+  - https://shiki.matsu.io/guide/regex-engines#javascript-regexp-engine-experimental: "The JavaScript engine is more suitable for running in the browser in some cases that you want to control the bundle size."
+  - https://shiki.matsu.io/references/engine-js-compat#report-summary
 - https://github.com/developit/redaxios
 - https://biomejs.dev/guides/configure-biome/#share-a-configuration-file:
   - "The entries defined in `extends` are resolved from the path where the `biome.json` file is defined. They are processed in the order they are listed, with settings in later files overriding earlier ones."
