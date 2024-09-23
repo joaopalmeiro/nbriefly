@@ -1,26 +1,42 @@
 {
   "name": "nbriefly",
-  "description": "Preview Jupyter notebooks hosted in repos.",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
+  "description": "Preview Jupyter notebooks hosted in repos.",
   "author": {
     "name": "João Palmeiro",
     "email": "joaopalmeiro@proton.me",
     "url": "https://github.com/joaopalmeiro"
   },
+  "type": "module",
   "scripts": {
-    "dev": "vite --port=3001",
     "build": "vite build",
-    "serve": "vite preview",
-    "start": "vite",
-    "lint": "run-s lint:types lint:pkgJson lint:code",
-    "lint:code": "biome lint --verbose .",
-    "lint:pkgJson": "sort-package-json --check",
-    "lint:types": "tsc --noEmit",
+    "check:biome": "biome rage --formatter --linter",
+    "dev": "vite --port=3001",
     "format": "run-s format:pkgJson format:code",
     "format:code": "biome check --apply --verbose .",
-    "format:pkgJson": "sort-package-json"
+    "format:pkgJson": "sort-package-json",
+    "lint": "run-s lint:pkgJson lint:code",
+    "lint:code": "biome lint --verbose .",
+    "lint:pkgJson": "sort-package-json --check",
+    "serve": "vite preview",
+    "start": "vite"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "1.58.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.7.0",
+    "@joaopalmeiro/biome-react-config": "0.2.0",
+    "@tanstack/router-plugin": "1.58.4",
+    "@types/react": "18.3.8",
+    "@types/react-dom": "18.3.0",
+    "@vitejs/plugin-react": "4.3.1",
+    "npm-run-all2": "6.2.3",
+    "sort-package-json": "2.10.1",
+    "vite": "5.4.7"
   },
   "engines": {
     "node": ">=20.0.0"
