@@ -10,14 +10,14 @@
 
 // Import Routes
 
+import { Route as NotebookUrlImport } from "./routes/$notebookUrl";
 import { Route as rootRoute } from "./routes/__root";
-import { Route as AboutImport } from "./routes/about";
 import { Route as IndexImport } from "./routes/index";
 
 // Create/Update Routes
 
-const AboutRoute = AboutImport.update({
-  path: "/about",
+const NotebookUrlRoute = NotebookUrlImport.update({
+  path: "/$notebookUrl",
   getParentRoute: () => rootRoute,
 } as any);
 
@@ -37,11 +37,11 @@ declare module "@tanstack/react-router" {
       preLoaderRoute: typeof IndexImport;
       parentRoute: typeof rootRoute;
     };
-    "/about": {
-      id: "/about";
-      path: "/about";
-      fullPath: "/about";
-      preLoaderRoute: typeof AboutImport;
+    "/$notebookUrl": {
+      id: "/$notebookUrl";
+      path: "/$notebookUrl";
+      fullPath: "/$notebookUrl";
+      preLoaderRoute: typeof NotebookUrlImport;
       parentRoute: typeof rootRoute;
     };
   }
@@ -51,37 +51,37 @@ declare module "@tanstack/react-router" {
 
 export interface FileRoutesByFullPath {
   "/": typeof IndexRoute;
-  "/about": typeof AboutRoute;
+  "/$notebookUrl": typeof NotebookUrlRoute;
 }
 
 export interface FileRoutesByTo {
   "/": typeof IndexRoute;
-  "/about": typeof AboutRoute;
+  "/$notebookUrl": typeof NotebookUrlRoute;
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute;
   "/": typeof IndexRoute;
-  "/about": typeof AboutRoute;
+  "/$notebookUrl": typeof NotebookUrlRoute;
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath;
-  fullPaths: "/" | "/about";
+  fullPaths: "/" | "/$notebookUrl";
   fileRoutesByTo: FileRoutesByTo;
-  to: "/" | "/about";
-  id: "__root__" | "/" | "/about";
+  to: "/" | "/$notebookUrl";
+  id: "__root__" | "/" | "/$notebookUrl";
   fileRoutesById: FileRoutesById;
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute;
-  AboutRoute: typeof AboutRoute;
+  NotebookUrlRoute: typeof NotebookUrlRoute;
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
+  NotebookUrlRoute: NotebookUrlRoute,
 };
 
 export const routeTree = rootRoute
@@ -97,14 +97,14 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/about"
+        "/$notebookUrl"
       ]
     },
     "/": {
       "filePath": "index.tsx"
     },
-    "/about": {
-      "filePath": "about.tsx"
+    "/$notebookUrl": {
+      "filePath": "$notebookUrl.tsx"
     }
   }
 }
