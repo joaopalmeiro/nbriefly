@@ -24,6 +24,7 @@
   - https://tanstack.com/form/latest/docs/framework/react/quick-start
   - https://tanstack.com/form/latest/docs/overview#enough-talk-show-me-some-code-already
 - https://github.com/jupyter/nbformat/blob/main/nbformat/v4/nbformat.v4.schema.json
+- https://github.com/colinhacks/zod#strict: "By default Zod object schemas strip out unrecognized keys during parsing."
 
 ## Commands
 
