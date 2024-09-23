@@ -1,0 +1,28 @@
+{
+  "name": "nbriefly",
+  "description": "Preview Jupyter notebooks hosted in repos.",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "author": {
+    "name": "João Palmeiro",
+    "email": "joaopalmeiro@proton.me",
+    "url": "https://github.com/joaopalmeiro"
+  },
+  "scripts": {
+    "dev": "vite --port=3001",
+    "build": "vite build",
+    "serve": "vite preview",
+    "start": "vite",
+    "lint": "run-s lint:types lint:pkgJson lint:code",
+    "lint:code": "biome lint --verbose .",
+    "lint:pkgJson": "sort-package-json --check",
+    "lint:types": "tsc --noEmit",
+    "format": "run-s format:pkgJson format:code",
+    "format:code": "biome check --apply --verbose .",
+    "format:pkgJson": "sort-package-json"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
