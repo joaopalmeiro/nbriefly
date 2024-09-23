@@ -23,8 +23,12 @@
   - https://tanstack.com/form/latest/docs/overview
   - https://tanstack.com/form/latest/docs/framework/react/quick-start
   - https://tanstack.com/form/latest/docs/overview#enough-talk-show-me-some-code-already
-- https://github.com/jupyter/nbformat/blob/main/nbformat/v4/nbformat.v4.schema.json
-- https://github.com/colinhacks/zod#strict: "By default Zod object schemas strip out unrecognized keys during parsing."
+- Zod:
+  - https://github.com/jupyter/nbformat/blob/main/nbformat/v4/nbformat.v4.schema.json
+  - https://github.com/colinhacks/zod#strict: "By default Zod object schemas strip out unrecognized keys during parsing."
+  - https://zod.dev/?id=literals
+  - https://zod.dev/?id=unions
+- https://github.com/quantizor/markdown-to-jsx
 
 ## Commands
 
@@ -33,6 +37,7 @@ npm install \
 @tanstack/react-router \
 react \
 react-dom \
+zod \
 && npm install -D \
 @biomejs/biome \
 @joaopalmeiro/biome-react-config \
