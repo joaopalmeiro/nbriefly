@@ -1,4 +1,4 @@
-import { Link, createFileRoute } from "@tanstack/react-router";
+import { Link, createFileRoute, useNavigate } from "@tanstack/react-router";
 import type { FormEvent } from "react";
 
 export const Route = createFileRoute("/")({
@@ -6,10 +6,18 @@ export const Route = createFileRoute("/")({
 });
 
 function HomeComponent() {
+  const navigate = useNavigate({ from: "/" });
+
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    console.log(event.target);
+    navigate({
+      to: "/$notebookUrl",
+      params: {
+        notebookUrl:
+          "https://raw.githubusercontent.com/altair-viz/altair_notebooks/refs/heads/master/notebooks/03-ScatterCharts.ipynb",
+      },
+    });
   }
 
   return (

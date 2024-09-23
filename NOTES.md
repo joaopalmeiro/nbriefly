@@ -4,6 +4,11 @@
 - TanStack Router:
   - https://tanstack.com/router/latest/docs/framework/react/quick-start
   - https://tanstack.com/router/latest/docs/framework/react/guide/routing-concepts#dynamic-route-segments
+  - https://tanstack.com/router/latest/docs/framework/react/guide/navigation#dynamic-links
+  - https://tanstack.com/router/latest/docs/framework/react/guide/navigation#usenavigate
+  - https://tanstack.com/router/latest/docs/framework/react/guide/data-loading#using-path-params
+  - https://tanstack.com/router/latest/docs/framework/react/examples/basic-file-based
+  - https://tanstack.com/router/latest/docs/framework/react/guide/data-loading#showing-a-pending-component
 - https://github.com/swan-io/chicane
 - https://gitlab.com/joaommpalmeiro/template-react-vite
 - https://ui.shadcn.com/docs/components/typography
@@ -44,4 +49,16 @@ rm -rf node_modules/ && npm install
 
 ```bash
 npm create @tanstack/router@latest demo
+```
+
+## Snippets
+
+- https://tanstack.com/router/latest/docs/framework/react/guide/data-loading#using-router-context
+
+```ts
+export const fetchPosts = async () => {
+  const res = await fetch(`/api/posts?page=${pageIndex}`);
+  if (!res.ok) throw new Error("Failed to fetch posts");
+  return res.json();
+};
 ```

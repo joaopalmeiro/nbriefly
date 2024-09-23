@@ -1,11 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import { fetchNotebookByUrl } from "../utils";
+
 export const Route = createFileRoute("/$notebookUrl")({
-  component: PostComponent,
+  loader: async ({ params: { notebookUrl } }) => fetchNotebookByUrl(notebookUrl),
+  component: NotebookComponent,
+  pendingComponent: LoadingComponent,
 });
 
-function PostComponent() {
-  const { notebookUrl } = Route.useParams();
+function NotebookComponent() {
+  const notebook = Route.useLoaderData();
 
-  return <div>Notebook: {notebookUrl}</div>;
+  return <pre>{JSON.stringify(notebook, null, 2)}</pre>;
+}
+
+function LoadingComponent() {
+  return <p>Loading...</p>;
 }
