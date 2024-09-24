@@ -23,6 +23,8 @@
     "start": "vite"
   },
   "dependencies": {
+    "@lezer/highlight": "1.2.1",
+    "@lezer/python": "1.1.14",
     "@tanstack/react-router": "1.58.3",
     "react": "18.3.1",
     "react-dom": "18.3.1",

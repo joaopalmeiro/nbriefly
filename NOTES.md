@@ -35,11 +35,15 @@
   - https://zod.dev/?id=literals
   - https://zod.dev/?id=unions
 - https://github.com/quantizor/markdown-to-jsx
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code: "To represent multiple lines of code, wrap the `<code>` element within a `<pre>` element. The `<code>` element by itself only represents a single phrase of code or line of code."
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre
 
 ## Commands
 
 ```bash
 npm install \
+@lezer/highlight \
+@lezer/python \
 @tanstack/react-router \
 react \
 react-dom \
